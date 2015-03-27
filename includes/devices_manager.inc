@@ -48,6 +48,8 @@ if((isset($_REQUEST['sub_type'])) AND ((!$no_add) OR (($_REQUEST['sub_type'] == 
     $sub_type = "";
 }
 
+file_put_contents('/tftpboot/syncinfo.xml','<IMAGE VERSION="*" SYNC="' . time() . '"/>');
+
 switch ($sub_type) {
     //Edit Mode
     case "edit":
